@@ -42,7 +42,7 @@ h2 {
     display: inline-block;
     color: white;
 }
-#outer_planets_nav {
+#inner_planets_nav {
     display: inline-block;
     font-size: 16px;
     margin-left: 37.5%;
@@ -55,10 +55,5 @@ h2 {
 
 }
 
-#mercury_text, #earth_text, #mars_text, #venus_text {
-    border: 5px, solid, red;
-    font-size: 15px;
-    color: white;
-}
 
 

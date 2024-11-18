@@ -6,16 +6,16 @@
 <html>
     
 <head>
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="outerplanets.css"></link>
     <title>Astro 5 Simulator</title>
 </head>
 <body>
 
-    <!--header-->
+<!--header-->
 <h1>Astronomy 5, Solar System Simulator | The Inner Planets</h1>
 <h2>by Euan House</h2>
 <div id="inline">
-    <a id="outer_planets_nav" href="outerplanets.html" >view outer planets</a>
+    <a id="inner_planets_nav" href="simulator.html" >view inner planets</a>
     <button id="start_simulation" onclick="toggle_simulation()">click me to toggle simulation</button>
     <div id="time">elapsed time:0 earth days</div>
     
@@ -57,37 +57,39 @@
 
     <rect width="100%" height="100%" fill="url(#stars)"></rect>
 
-    <!--MERCURY .387AU-->
-    <circle r="154.8" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="mercury_orbit"></circle>
-    <circle r="6" cx="361" cy="960" fill="#3b598a" id="mercury"></circle>
-    
-    <!--VENUS .7AU-->
-    <circle r="280" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="venus_orbit"></circle>
-    <circle r="10" cx="361" cy="960" fill="orange" id="venus"></circle>
-
     <!--EARTH 1AU-->
-    <circle r="400" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="earth_orbit"></circle>
-    <circle r="10" cx="560" cy="960" fill="blue" id="earth"></circle>
+    <circle r="25" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="earth_orbit"></circle>
+    <circle r="5" cx="935" cy="960" fill="blue" id="earth"></circle>
 
-    <!--MARS 1.5AU-->
-    <circle r="600" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="mars_orbit"></circle>
-    <circle r="8" cx="361" cy="960" fill="red" id="mars"></circle>
+    <!--JUPITER 5.2AU-->
+    <circle r="130" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="jupiter_orbit"></circle>
+    <circle r="10" cx="361" cy="960" fill="#8c2800" id="jupiter"></circle>
+    
+    <!--SATURN 9.5AU-->
+    <circle r="237.5" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="saturn_orbit"></circle>
+    <circle r="10" cx="361" cy="960" fill="#fc9342" id="saturn"></circle>
 
-    <!--ASTEROID BELT 2.2 - 3.2 AU-->
-    <circle r="880" cx="960" cy="960" fill-opacity="0%" stroke-opacity="8%" stroke="grey" stroke-width="400px"></circle>
-    <circle r="880" cx="960" cy="960" fill-opacity="0%" stroke-opacity="100%" stroke="url(#asteroids)" stroke-width="400px"></circle>
+    <!--URANUS 19AU-->
+    <circle r="475" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="uranus_orbit"></circle>
+    <circle r="10" cx="560" cy="960" fill="#409cff" id="uranus"></circle>
+
+    <!--NEPTUNE 30AU-->
+    <circle r="750" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="neptune_orbit"></circle>
+    <circle r="10" cx="361" cy="960" fill="#005aba" id="neptune"></circle>
+
+ 
 
     <!--set labels-->
-    <circle r="25" cx="960" cy="960" fill="red"></circle>
-    <text id="mercury_text" x="935" y="800" fill="white">Mercury</text>
-    <text id="venus_text" x="935" y="670" fill="white">Venus</text>
-    <text id="earth_text" x="935" y="550" fill="white">Earth</text>
-    <text id="mars_text" x="935" y="350" fill="white">Mars</text>
-    <text id="mars_text" x="910" y="300" fill="white">Asteroid Belt</text>
+    <circle r="10" cx="960" cy="960" fill="red"></circle>
+    <text id="mercury_text" x="940" y="925" fill="white">Earth</text>
+    <text id="mercury_text" x="935" y="820" fill="white">Jupiter</text>
+    <text id="venus_text" x="935" y="715" fill="white">Saturn</text>
+    <text id="earth_text" x="935" y="470" fill="white">Uranus</text>
+    <text id="mars_text" x="935" y="200" fill="white">Neptune</text>
 
 </svg>
 
 
 </body>
-<script src="script.js"></script>
+<script src="outerplanets.js"></script>
 </html>
