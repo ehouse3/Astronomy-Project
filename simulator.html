@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Astro 5 Simulator</title>
+</head>
+<body>
+
+<h1>Astronomy 5, Solar System Simulator</h1>
+<h2>by Euan House</h2>
+
+<svg height="100%" width="100%" id="svg">
+    <defs>
+        <pattern width="25%" height="25%" id="stars">
+            <circle r="1" fill="white" cx="4%" cy="4%"></circle>
+            <circle r="1" fill="white" cx="1%" cy="18%"></circle>
+            <circle r="1" fill="white" cx="10%" cy="6%"></circle>
+            <circle r="1" fill="white" cx="1%" cy="16%"></circle>
+            <circle r="1" fill="white" cx="12%" cy="14%"></circle>
+            <circle r="1" fill="white" cx="14%" cy="19%"></circle>
+            <circle r="1" fill="white" cx="11%" cy="4%"></circle>
+            <circle r="2" fill="white" cx="3%" cy="13%"></circle>
+            <circle r="2" fill="white" cx="15%" cy="18%"></circle>
+            <circle r="1" fill="white" cx="1%" cy="18%"></circle>
+            <circle r="1" fill="white" cx="22%" cy="12%"></circle>
+            <circle r="1" fill="white" cx="22.5%" cy="17%"></circle>
+            <circle r="1" fill="white" cx="19%" cy="5%"></circle>
+            <circle r="2" fill="white" cx="5%" cy="10%"></circle>
+        </pattern>
+    </defs>
+
+    <rect width="100%" height="100%" fill="url(#stars)"></rect>
+
+    <circle r="200" cx="50%" cy="50%" fill-opacity="0%" stroke="white" stroke-width="1px" ></circle>
+    <circle r="400" cx="50%" cy="50%" fill-opacity="0%" stroke="white" stroke-width="1px" ></circle>
+    <circle r="100" cx="50%" cy="50%" fill="red"></circle>
+    
+    
+</svg>
+
+
+</body>
+<script src="script.js"></script>
+</html>

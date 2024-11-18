@@ -1,0 +1,27 @@
+
+html, body {
+    background-color: black;
+    height: 100%;
+    margin: 0px;
+}
+
+h1 {
+    color: lightgrey;
+    margin: 2px;
+    text-align: center;
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+}
+h2 {
+    color: lightgrey;
+    margin: 2px;
+    text-align: center;
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+}
+#svg {
+    border: 1px, red, solid;
+}
+
