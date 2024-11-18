@@ -9,11 +9,14 @@
 
 <h1>Astronomy 5, Solar System Simulator</h1>
 <h2>by Euan House</h2>
-<button id="start_simulation" onclick="toggle_simulation()">click me to toggle simulation</button>
+<div>
+    <button id="start_simulation" onclick="toggle_simulation()">click me to toggle simulation</button>
+</div>
+
 
 <svg height="1920px" width="100%" id="svg">
     <defs>
-        <pattern width="20%" height="20%" id="stars">
+        <pattern width="20%" height="20%" id="stars"> <!--star pattern-->
             <circle r="1" fill="white" cx="4%" cy="4%"></circle>
             <circle r="1" fill="white" cx="1%" cy="18%"></circle>
             <circle r="1" fill="white" cx="10%" cy="6%"></circle>
@@ -29,22 +32,46 @@
             <circle r="1" fill="white" cx="19%" cy="5%"></circle>
             <circle r="2" fill="white" cx="5%" cy="10%"></circle>
         </pattern>
+        <pattern width="20%" height="20%" id="asteroids" > <!--asteroid belt pattern-->
+            <circle r="8" fill="grey" cx="15%" cy="4%"></circle>
+            <circle r="4" fill="grey" cx="1.5%" cy="2%"></circle>
+            <circle r="2" fill="grey" cx="3%" cy="12%"></circle>
+            <circle r="5" fill="grey" cx="18.5%" cy="18%"></circle>
+            <circle r="2" fill="grey" cx="10%" cy="8%"></circle>
+            <circle r="6" fill="grey" cx="7.5%" cy="15%"></circle>
+            <circle r="5" fill="grey" cx="2%" cy="4%"></circle>
+            <circle r="5" fill="grey" cx="6.5%" cy="10.5%"></circle>
+            <circle r="4" fill="grey" cx="2.5%" cy="18%"></circle>
+            <circle r="4" fill="grey" cx="16.5%" cy="10%"></circle>
+            <circle r="7" fill="grey" cx="15%" cy="11%"></circle>
+        </pattern>
     </defs>
 
     <rect width="100%" height="100%" fill="url(#stars)"></rect>
 
+    <!--MERCURY .387AU-->
+    <circle r="154.8" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="mercury_orbit"></circle>
+    <circle r="10" cx="361" cy="960" fill="#3b598a" id="mercury"></circle>
+    
+    <!--VENUS .7AU-->
+    <circle r="280" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="venus_orbit"></circle>
+    <circle r="10" cx="361" cy="960" fill="orange" id="venus"></circle>
+
+    <!--EARTH 1AU-->
     <circle r="400" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="earth_orbit"></circle>
-    <circle r="20" cx="560" cy="960" fill="blue" id="earth"></circle>
+    <circle r="10" cx="560" cy="960" fill="blue" id="earth"></circle>
 
+    <!--MARS 1.5AU-->
     <circle r="600" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="mars_orbit"></circle>
-    <circle r="20" cx="361" cy="960" fill="red" id="mars"></circle>
+    <circle r="10" cx="361" cy="960" fill="red" id="mars"></circle>
+
+    <!--ASTEROID BELT 2.2 - 3.2 AU-->
+    <circle r="880" cx="960" cy="960" fill-opacity="0%" stroke-opacity="5%" stroke="grey" stroke-width="400px"></circle>
+    <circle r="880" cx="960" cy="960" fill-opacity="0%" stroke-opacity="100%" stroke="url(#asteroids)" stroke-width="400px"></circle>
 
 
+    <circle r="25" cx="960" cy="960" fill="red"></circle>
 
-
-    <circle r="50" cx="960" cy="960" fill="red"></circle>
-    
-    
 </svg>
 
 
