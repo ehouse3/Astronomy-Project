@@ -7,21 +7,30 @@ html, body {
 
 h1 {
     color: lightgrey;
-    margin: 2px;
+    margin: 0px;
     text-align: center;
-    border-width: 1px;
+    border-width: 0px;
     border-color: red;
     border-style: solid;
 }
 h2 {
     color: lightgrey;
-    margin: 2px;
+    margin: 0px;
     text-align: center;
-    border-width: 1px;
+    border-width: 0px;
     border-color: red;
     border-style: solid;
 }
 #svg {
-    border: 1px, red, solid;
+    margin: 0px;
+    border: 0px, red, solid;
 }
+#start_simulation {
+    font-size: 16px;
+    width: 12.5%;
+    margin-left: 43.75%;
+    color: black;
+}
+
+
 
