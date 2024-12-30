@@ -5,6 +5,7 @@
 *   I used simple trig functions to determine the new locations of the planets by increasing the degrees and calculating from there
 */
 
+/*
 
 var center = 960;
 
@@ -115,4 +116,4 @@ function simulation_timestep() {
 
 }
 
-
+*/
