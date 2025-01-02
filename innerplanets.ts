@@ -18,9 +18,9 @@ const earth_radius_inner : number = Number(earth_orbit_inner.getAttribute("r"));
 let earth_cur_cx_inner : number = 0;
 let earth_cur_cy_inner : number = 0;
 const earth_per_of_rev_inner : number = 365; //period of revolution
-let earth_text : HTMLElement = <HTMLElement>document.getElementById('earth_text');
-let earth_text_cx = document.getElementById('earth_text')?.getAttribute("cx");
-let earth_text_cy = document.getElementById('earth_text')?.getAttribute("cy");
+let earth_text : HTMLElement = <HTMLElement>document.getElementById('earth_text'); //earth text element
+let earth_text_cx = document.getElementById('earth_text')?.getAttribute("cx"); 
+let earth_text_cy = document.getElementById('earth_text')?.getAttribute("cy"); 
 
 //mars variables
 let mars : HTMLElement = <HTMLElement>document.getElementById('mars');
@@ -87,10 +87,10 @@ function simulation_timestep_inner() {
     earth_cur_cy_inner = Math.sin(earth_degrees_inner)*earth_radius_inner + center_inner; //find new location
     earth_cur_cx_inner = Math.cos(earth_degrees_inner)*earth_radius_inner + center_inner;
 
-    earth_inner.setAttribute("cx", String(earth_cur_cx_inner)); //set html
+    earth_inner.setAttribute("cx", String(earth_cur_cx_inner)); //move position
     earth_inner.setAttribute("cy", String(earth_cur_cy_inner));
 
-    earth_text.setAttribute("x", String(earth_cur_cx_inner - 16));
+    earth_text.setAttribute("x", String(earth_cur_cx_inner - 16)); //move texts
     earth_text.setAttribute("y", String(earth_cur_cy_inner - 15));
 
     //mars
