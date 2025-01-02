@@ -22,7 +22,7 @@
 </div>
 
 
-<svg height="1920px" width="100%" id="svg"> <!-- screen size svg-->
+<svg height="3000px" width="3000px" id="svg"> <!-- screen size svg-->
     <defs>
         <pattern width="20%" height="20%" id="stars"> <!--star pattern-->
             <circle r="1" fill="white" cx="4%" cy="4%"></circle>
@@ -58,34 +58,34 @@
     <rect width="100%" height="100%" fill="url(#stars)"></rect>
 
     <!--MERCURY .387AU-->
-    <circle r="154.8" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="mercury_orbit"></circle>
+    <circle r="154.8" cx="50%" cy="50%" fill-opacity="0%" stroke="white" stroke-width="1px" id="mercury_orbit"></circle>
     <circle r="6" cx="361" cy="960" fill="#3b598a" id="mercury"></circle>
+    <text id="mercury_text" x="0" y="0" fill="white">Mercury</text>
     
     <!--VENUS .7AU-->
-    <circle r="280" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="venus_orbit"></circle>
+    <circle r="280" cx="50%" cy="50%" fill-opacity="0%" stroke="white" stroke-width="1px" id="venus_orbit"></circle>
     <circle r="10" cx="361" cy="960" fill="orange" id="venus"></circle>
+    <text id="venus_text" x="0" y="670" fill="white">Venus</text>
 
     <!--EARTH 1AU-->
-    <circle r="400" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="earth_orbit"></circle>
+    <circle r="400" cx="50%" cy="50%" fill-opacity="0%" stroke="white" stroke-width="1px" id="earth_orbit"></circle>
     <circle r="10" cx="560" cy="960" fill="blue" id="earth"></circle>
+    <text id="earth_text" x="100" y="100" fill="white">Earth</text>
 
     <!--MARS 1.5AU-->
-    <circle r="600" cx="960" cy="960" fill-opacity="0%" stroke="white" stroke-width="1px" id="mars_orbit"></circle>
+    <circle r="600" cx="50%" cy="50%" fill-opacity="0%" stroke="white" stroke-width="1px" id="mars_orbit"></circle>
     <circle r="8" cx="361" cy="960" fill="red" id="mars"></circle>
+    <text id="mars_text" x="0" y="0" fill="white">Mars</text>
 
     <!--ASTEROID BELT 2.2 - 3.2 AU-->
-    <circle r="880" cx="960" cy="960" fill-opacity="0%" stroke-opacity="8%" stroke="grey" stroke-width="400px"></circle>
+    <circle r="880" cx="50%" cy="50%" fill-opacity="0%" stroke-opacity="8%" stroke="grey" stroke-width="400px"></circle>
     <circle r="880" cx="960" cy="960" fill-opacity="0%" stroke-opacity="100%" stroke="url(#asteroids)" stroke-width="400px"></circle>
+    <text id="mars_text" x="48%" y="20%" fill="white">Asteroid Belt</text>
 
     
 
     <!--set labels-->
-    <circle r="25" cx="960" cy="960" fill="red"></circle>
-    <text id="mercury_text" x="935" y="800" fill="white">Mercury</text>
-    <text id="venus_text" x="935" y="670" fill="white">Venus</text>
-    <text id="earth_text" x="935" y="550" fill="white">Earth</text>
-    <text id="mars_text" x="935" y="350" fill="white">Mars</text>
-    <text id="mars_text" x="910" y="300" fill="white">Asteroid Belt</text>
+    <circle r="25" cx="50%" cy="50%" fill="red"></circle>
 
 </svg>
 

@@ -5,9 +5,10 @@
 *   I used simple trig functions to determine the new locations of the planets by increasing the degrees and calculating from there
 */
 
+let main_svg : HTMLElement = <HTMLElement>document.getElementById('svg');
 
-
-let center_inner: number = 960;
+let center_inner: number = Number(main_svg.getAttribute('width')?.slice(0,-2))/2;
+//let center_inner : number = 960;
 
 //earth variables
 let earth_inner : HTMLElement = <HTMLElement>document.getElementById('earth');
@@ -17,7 +18,9 @@ const earth_radius_inner : number = Number(earth_orbit_inner.getAttribute("r"));
 let earth_cur_cx_inner : number = 0;
 let earth_cur_cy_inner : number = 0;
 const earth_per_of_rev_inner : number = 365; //period of revolution
-
+let earth_text : HTMLElement = <HTMLElement>document.getElementById('earth_text');
+let earth_text_cx = document.getElementById('earth_text')?.getAttribute("cx");
+let earth_text_cy = document.getElementById('earth_text')?.getAttribute("cy");
 
 //mars variables
 let mars : HTMLElement = <HTMLElement>document.getElementById('mars');
@@ -86,6 +89,9 @@ function simulation_timestep_inner() {
 
     earth_inner.setAttribute("cx", String(earth_cur_cx_inner)); //set html
     earth_inner.setAttribute("cy", String(earth_cur_cy_inner));
+
+    earth_text.setAttribute("x", String(earth_cur_cx_inner - 16));
+    earth_text.setAttribute("y", String(earth_cur_cy_inner - 15));
 
     //mars
     mars_degrees+=(1/mars_per_of_rev)*2*Math.PI; //increase by 1 earth day
