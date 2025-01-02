@@ -6,51 +6,51 @@
 */
 
 
-var center_outer : number = 960;
+let center_outer : number = 960;
 
 //earth variables
-var earth_outer : HTMLElement = <HTMLElement>document.getElementById('earth');
-var earth_orbit_outer : HTMLElement = <HTMLElement>document.getElementById('earth_orbit');
-var earth_degrees_outer : number = 1*Math.PI;
+let earth_outer : HTMLElement = <HTMLElement>document.getElementById('earth');
+let earth_orbit_outer : HTMLElement = <HTMLElement>document.getElementById('earth_orbit');
+let earth_degrees_outer : number = 1*Math.PI;
 const earth_radius_outer : number = Number(earth_orbit_outer.getAttribute("r"));
-var earth_cur_cx_outer : number = 0;
-var earth_cur_cy_outer : number = 0;
+let earth_cur_cx_outer : number = 0;
+let earth_cur_cy_outer : number = 0;
 const earth_per_of_rev_outer : number = 365; //period of revolution
 
 //neptune variables
-var neptune : HTMLElement = <HTMLElement>document.getElementById('neptune');
-var neptune_orbit : HTMLElement = <HTMLElement>document.getElementById('neptune_orbit');
-var neptune_degrees : number = 1.5*Math.PI;
+let neptune : HTMLElement = <HTMLElement>document.getElementById('neptune');
+let neptune_orbit : HTMLElement = <HTMLElement>document.getElementById('neptune_orbit');
+let neptune_degrees : number = 1.5*Math.PI;
 const neptune_radius : number = Number(neptune_orbit.getAttribute("r"));
-var neptune_cur_cx : number = 0;
-var neptune_cur_cy : number= 0; 
+let neptune_cur_cx : number = 0;
+let neptune_cur_cy : number= 0; 
 const neptune_per_of_rev : number = 60190; //period of revolution
 
 //uranus variables
-var uranus : HTMLElement = <HTMLElement>document.getElementById('uranus');
-var uranus_orbit : HTMLElement = <HTMLElement>document.getElementById('uranus_orbit');
-var uranus_degrees : number = 1*Math.PI;
+let uranus : HTMLElement = <HTMLElement>document.getElementById('uranus');
+let uranus_orbit : HTMLElement = <HTMLElement>document.getElementById('uranus_orbit');
+let uranus_degrees : number = 1*Math.PI;
 const uranus_radius : number = Number(uranus_orbit.getAttribute("r"));
-var uranus_cur_cx : number = 0;
-var uranus_cur_cy : number = 0;
+let uranus_cur_cx : number = 0;
+let uranus_cur_cy : number = 0;
 const uranus_per_of_rev : number = 30687; //period of revolution
 
 //saturn variables
-var saturn : HTMLElement= <HTMLElement>document.getElementById('saturn');
-var saturn_orbit : HTMLElement = <HTMLElement>document.getElementById('saturn_orbit');
-var saturn_degrees : number = 1.5*Math.PI;
+let saturn : HTMLElement= <HTMLElement>document.getElementById('saturn');
+let saturn_orbit : HTMLElement = <HTMLElement>document.getElementById('saturn_orbit');
+let saturn_degrees : number = 1.5*Math.PI;
 const saturn_radius : number = Number(saturn_orbit.getAttribute("r"));
-var saturn_cur_cx : number = 0;
-var saturn_cur_cy : number = 0; 
+let saturn_cur_cx : number = 0;
+let saturn_cur_cy : number = 0; 
 const saturn_per_of_rev : number = 10756; //period of revolution
 
 //jupiter variables
-var jupiter : HTMLElement = <HTMLElement>document.getElementById('jupiter');
-var jupiter_orbit : HTMLElement = <HTMLElement>document.getElementById('jupiter_orbit');
-var jupiter_degrees : number= 1.5*Math.PI;
+let jupiter : HTMLElement = <HTMLElement>document.getElementById('jupiter');
+let jupiter_orbit : HTMLElement = <HTMLElement>document.getElementById('jupiter_orbit');
+let jupiter_degrees : number= 1.5*Math.PI;
 const jupiter_radius : number = Number(jupiter_orbit.getAttribute("r"));
-var jupiter_cur_cx : number = 0;
-var jupiter_cur_cy : number = 0; 
+let jupiter_cur_cx : number = 0;
+let jupiter_cur_cy : number = 0; 
 const jupiter_per_of_rev : number = 4330;
 
 //randomly determine starting location
@@ -61,21 +61,21 @@ neptune_degrees = Math.random() * 2*Math.PI;
 simulation_timestep_outer();
 
 
-var simulation_running : boolean = false;
-var interval;
+let simulation_running_outer : boolean = false;
+let interval_outer;
 function toggle_simulation_outer() { //turn sim off or on
-    if(simulation_running) {
-        clearInterval(interval);
-        simulation_running = false;
+    if(simulation_running_outer) {
+        clearInterval(interval_outer);
+        simulation_running_outer = false;
     }else{
-        interval = setInterval(simulation_timestep_outer, 18);
-        simulation_running = true;
+        interval_outer = setInterval(simulation_timestep_outer, 18);
+        simulation_running_outer = true;
     }
 }
 
 //total time passed html element
-var total_days_outer : number = 0;
-var time_elem_outer : HTMLElement = <HTMLElement>document.getElementById('time');
+let total_days_outer : number = 0;
+let time_elem_outer : HTMLElement = <HTMLElement>document.getElementById('time');
 
 //timestep function to simulate one uranus day passing for all planets
 function simulation_timestep_outer() {

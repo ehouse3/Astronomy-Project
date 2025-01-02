@@ -43,16 +43,16 @@ venus_degrees = Math.random() * 2 * Math.PI;
 earth_degrees_inner = Math.random() * 2 * Math.PI;
 mars_degrees = Math.random() * 2 * Math.PI;
 simulation_timestep_inner();
-var simulation_running = false;
-var interval;
+var simulation_running_inner = false;
+var interval_inner;
 function toggle_simulation_inner() {
-    if (simulation_running) {
-        clearInterval(interval);
-        simulation_running = false;
+    if (simulation_running_inner) {
+        clearInterval(interval_inner);
+        simulation_running_inner = false;
     }
     else {
-        interval = setInterval(simulation_timestep_inner, 25);
-        simulation_running = true;
+        interval_inner = setInterval(simulation_timestep_inner, 25);
+        simulation_running_inner = true;
     }
 }
 //total time passed html element

@@ -51,16 +51,16 @@ saturn_degrees = Math.random() * 2 * Math.PI;
 uranus_degrees = Math.random() * 2 * Math.PI;
 neptune_degrees = Math.random() * 2 * Math.PI;
 simulation_timestep_outer();
-var simulation_running = false;
-var interval;
+var simulation_running_outer = false;
+var interval_outer;
 function toggle_simulation_outer() {
-    if (simulation_running) {
-        clearInterval(interval);
-        simulation_running = false;
+    if (simulation_running_outer) {
+        clearInterval(interval_outer);
+        simulation_running_outer = false;
     }
     else {
-        interval = setInterval(simulation_timestep_outer, 18);
-        simulation_running = true;
+        interval_outer = setInterval(simulation_timestep_outer, 18);
+        simulation_running_outer = true;
     }
 }
 //total time passed html element

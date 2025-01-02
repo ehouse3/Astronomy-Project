@@ -12,17 +12,17 @@
 <body>
 
     <!--header-->
-<h1>Astronomy 5, Solar System Simulator | The Inner Planets</h1>
+<h1>Solar System Simulator | The Inner Planets</h1>
 <h2>by Euan House</h2>
 <div id="inline">
-    <a id="outer_planets_nav" href="outerplanets.html" >view outer planets</a>
-    <button id="start_simulation" onclick="toggle_simulation_inner()">click me to toggle simulation</button>
+    <a id="outer_planets_nav" href="outerplanets.html">view outer planets</a>
+    <button id="start_simulation" onclick="toggle_simulation_inner()">toggle simulation</button>
     <div id="time">elapsed time:0 earth days</div>
     
 </div>
 
 
-<svg height="1920px" width="100%" id="svg">
+<svg height="1920px" width="100%" id="svg"> <!-- screen size svg-->
     <defs>
         <pattern width="20%" height="20%" id="stars"> <!--star pattern-->
             <circle r="1" fill="white" cx="4%" cy="4%"></circle>
@@ -76,6 +76,8 @@
     <!--ASTEROID BELT 2.2 - 3.2 AU-->
     <circle r="880" cx="960" cy="960" fill-opacity="0%" stroke-opacity="8%" stroke="grey" stroke-width="400px"></circle>
     <circle r="880" cx="960" cy="960" fill-opacity="0%" stroke-opacity="100%" stroke="url(#asteroids)" stroke-width="400px"></circle>
+
+    
 
     <!--set labels-->
     <circle r="25" cx="960" cy="960" fill="red"></circle>

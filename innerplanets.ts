@@ -10,40 +10,40 @@
 let center_inner: number = 960;
 
 //earth variables
-var earth_inner : HTMLElement = <HTMLElement>document.getElementById('earth');
-var earth_orbit_inner : HTMLElement = <HTMLElement>document.getElementById('earth_orbit');
-var earth_degrees_inner : number = 1*Math.PI;
+let earth_inner : HTMLElement = <HTMLElement>document.getElementById('earth');
+let earth_orbit_inner : HTMLElement = <HTMLElement>document.getElementById('earth_orbit');
+let earth_degrees_inner : number = 1*Math.PI;
 const earth_radius_inner : number = Number(earth_orbit_inner.getAttribute("r"));
-var earth_cur_cx_inner : number = 0;
-var earth_cur_cy_inner : number = 0;
+let earth_cur_cx_inner : number = 0;
+let earth_cur_cy_inner : number = 0;
 const earth_per_of_rev_inner : number = 365; //period of revolution
 
 
 //mars variables
-var mars : HTMLElement = <HTMLElement>document.getElementById('mars');
-var mars_orbit : HTMLElement = <HTMLElement>document.getElementById('mars_orbit');
-var mars_degrees : number = 1.5*Math.PI;
+let mars : HTMLElement = <HTMLElement>document.getElementById('mars');
+let mars_orbit : HTMLElement = <HTMLElement>document.getElementById('mars_orbit');
+let mars_degrees : number = 1.5*Math.PI;
 const mars_radius : number = Number(mars_orbit.getAttribute("r"));
-var mars_cur_cx : number= 0;
-var mars_cur_cy : number = 0; 
+let mars_cur_cx : number= 0;
+let mars_cur_cy : number = 0; 
 const mars_per_of_rev : number = 687; //period of revolution
 
 //venus variables
-var venus : HTMLElement = <HTMLElement>document.getElementById('venus');
-var venus_orbit : HTMLElement = <HTMLElement>document.getElementById('venus_orbit');
-var venus_degrees : number = 1.5*Math.PI;
+let venus : HTMLElement = <HTMLElement>document.getElementById('venus');
+let venus_orbit : HTMLElement = <HTMLElement>document.getElementById('venus_orbit');
+let venus_degrees : number = 1.5*Math.PI;
 const venus_radius : number = Number(venus_orbit.getAttribute("r"));
-var venus_cur_cx : number = 0;
-var venus_cur_cy : number = 0; 
+let venus_cur_cx : number = 0;
+let venus_cur_cy : number = 0; 
 const venus_per_of_rev : number = 225; //period of revolution
 
 //mercury variables
-var mercury : HTMLElement = <HTMLElement>document.getElementById('mercury');
-var mercury_orbit : HTMLElement = <HTMLElement>document.getElementById('mercury_orbit');
-var mercury_degrees : number = 1.5*Math.PI;
+let mercury : HTMLElement = <HTMLElement>document.getElementById('mercury');
+let mercury_orbit : HTMLElement = <HTMLElement>document.getElementById('mercury_orbit');
+let mercury_degrees : number = 1.5*Math.PI;
 const mercury_radius : number = Number(mercury_orbit.getAttribute("r"));
-var mercury_cur_cx : number = 0;
-var mercury_cur_cy : number = 0; 
+let mercury_cur_cx : number = 0;
+let mercury_cur_cy : number = 0; 
 const mercury_per_of_rev : number = 88; //period of revolution
 
 //randomly determine starting location
@@ -54,15 +54,15 @@ mars_degrees = Math.random() * 2*Math.PI;
 simulation_timestep_inner();
 
 
-var simulation_running = false;
-var interval;
+let simulation_running_inner = false;
+let interval_inner;
 function toggle_simulation_inner() { //turn sim off or on
-    if(simulation_running) {
-        clearInterval(interval);
-        simulation_running = false;
+    if(simulation_running_inner) {
+        clearInterval(interval_inner);
+        simulation_running_inner = false;
     }else{
-        interval = setInterval(simulation_timestep_inner, 25);
-        simulation_running = true;
+        interval_inner = setInterval(simulation_timestep_inner, 25);
+        simulation_running_inner = true;
     }
 }
 
