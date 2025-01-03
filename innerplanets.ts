@@ -8,7 +8,6 @@
 let main_svg : HTMLElement = <HTMLElement>document.getElementById('svg');
 
 let center_inner: number = Number(main_svg.getAttribute('width')?.slice(0,-2))/2;
-//let center_inner : number = 960;
 
 //earth variables
 let earth_inner : HTMLElement = <HTMLElement>document.getElementById('earth');
@@ -19,8 +18,7 @@ let earth_cur_cx_inner : number = 0;
 let earth_cur_cy_inner : number = 0;
 const earth_per_of_rev_inner : number = 365; //period of revolution
 let earth_text : HTMLElement = <HTMLElement>document.getElementById('earth_text'); //earth text element
-let earth_text_cx = document.getElementById('earth_text')?.getAttribute("cx"); 
-let earth_text_cy = document.getElementById('earth_text')?.getAttribute("cy"); 
+let earth_text_back : HTMLElement = <HTMLElement>document.getElementById('earth_text_back'); //earth text background element
 
 //mars variables
 let mars : HTMLElement = <HTMLElement>document.getElementById('mars');
@@ -64,7 +62,7 @@ function toggle_simulation_inner() { //turn sim off or on
         clearInterval(interval_inner);
         simulation_running_inner = false;
     }else{
-        interval_inner = setInterval(simulation_timestep_inner, 25);
+        interval_inner = setInterval(simulation_timestep_inner, 50);
         simulation_running_inner = true;
     }
 }
@@ -92,6 +90,9 @@ function simulation_timestep_inner() {
 
     earth_text.setAttribute("x", String(earth_cur_cx_inner - 16)); //move texts
     earth_text.setAttribute("y", String(earth_cur_cy_inner - 15));
+    earth_text_back.setAttribute("x", String(earth_cur_cx_inner - 20)); //subtract half of width of background
+    earth_text_back.setAttribute("y", String(earth_cur_cy_inner - 28)); //idk
+
 
     //mars
     mars_degrees+=(1/mars_per_of_rev)*2*Math.PI; //increase by 1 earth day

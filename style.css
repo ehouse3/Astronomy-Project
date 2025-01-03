@@ -56,9 +56,7 @@ h2 {
 }
 
 #mercury_text, #earth_text, #mars_text, #venus_text {
-    border: 5px, solid, red;
     font-size: 15px;
-    color: white;
 }
 
 
