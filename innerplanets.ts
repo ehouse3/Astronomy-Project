@@ -90,8 +90,8 @@ function simulation_timestep_inner() {
 
     earth_text.setAttribute("x", String(earth_cur_cx_inner - 16)); //move texts
     earth_text.setAttribute("y", String(earth_cur_cy_inner - 15));
-    earth_text_back.setAttribute("x", String(earth_cur_cx_inner - 20)); //subtract half of width of background
-    earth_text_back.setAttribute("y", String(earth_cur_cy_inner - 28)); //idk
+    earth_text_back.setAttribute("x", String(earth_cur_cx_inner - 20)); //offset is half of width of background
+    earth_text_back.setAttribute("y", String(earth_cur_cy_inner - 28)); //manually set
 
 
     //mars
